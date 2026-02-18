@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Image Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">CodeAlpha Image Gallery</p>
+        <h1>Modern Image Gallery</h1>
+        <p class="subtitle">
+          Explore a curated collection of flowers, mountains, sea, sky, and stars
+          with smooth interactions and a clean, minimal layout.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Gallery filters">
+        <div class="filter-group" role="group" aria-label="Filter gallery">
+          <button class="filter-btn is-active" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="filter-btn" data-filter="flowers" aria-pressed="false">
+            Flowers
+          </button>
+          <button class="filter-btn" data-filter="mountain" aria-pressed="false">
+            Mountains
+          </button>
+          <button class="filter-btn" data-filter="sea" aria-pressed="false">
+            Sea
+          </button>
+          <button class="filter-btn" data-filter="sky" aria-pressed="false">
+            Sky
+          </button>
+          <button class="filter-btn" data-filter="stars" aria-pressed="false">
+            Stars
+          </button>
+        </div>
+      </section>
+
+      <section class="gallery-section" aria-live="polite">
+        <ul class="gallery" id="gallery"></ul>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox__backdrop" data-action="close"></div>
+      <div class="lightbox__content" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox__close" type="button" data-action="close" aria-label="Close lightbox">
+          <span aria-hidden="true">×</span>
+        </button>
+        <button class="lightbox__nav lightbox__prev" type="button" data-action="prev" aria-label="Previous image">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <figure class="lightbox__figure">
+          <img class="lightbox__image" alt="" />
+          <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__next" type="button" data-action="next" aria-label="Next image">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
